@@ -1,0 +1,112 @@
+/* الكارد */
+.coffee-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: 0.3s ease;
+  overflow: hidden;   /* مهم */
+}
+
+/* الصورة */
+.coffee-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* النصوص */
+.coffee-info {
+  margin-top: 10px;
+}
+
+.coffee-info h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* النجوم + القلب */
+.coffee-rating-fav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* الأزرار */
+.coffee-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.comment-btn,
+.menu-btn {
+  flex: 1;
+  background: #f5f5f5;
+  border: none;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Hover */
+.coffee-card:hover {
+  background-color: #a3e4bd;
+  transform: translateY(-5px);
+}
+
+
+
+
+
+
+
+
+
+
+
+.comments-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.comment-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 12px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.comment-img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.comment-content h4 {
+  margin: 0;
+  font-size: 15px;
+}
+
+.commented-with {
+  font-size: 12px;
+  color: gray;
+  margin: 2px 0;
+}
+
+.commented-with span {
+  color: #4CAF50;
+}
+
+.comment-content p {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}

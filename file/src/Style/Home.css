@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Google Sans Codewght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Trocchi:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Vend Sans:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto Serif:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Markazi Text:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend Deca:wght@300;400;700&display=swap');
+.roboto-condensed {
+    font-family: 'Google Sans Code', sans-serif;
+}
+.Trocchi{
+    font-family: 'Trocchi';
+}
+
+
+.homebackground{
+position: relative;
+}
+
+
+
+
+.places-page {
+
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-left: 60px;
+  position: relative;
+  overflow: hidden;
+  font-family: "Inter", sans-serif;
+}
+
+.content {
+  z-index: 2;
+  max-width: 500px;
+}
+
+
+
+
+.drops {
+  position: absolute;
+  right: 8%;
+  top: 1%;
+  width: 100px;
+  height: 300px;
+  transform: rotate(20deg);
+  opacity: 0.2;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.drop {
+  position: absolute;
+  width: 50px;
+  height: 70px;
+  background: radial-gradient( rgb(146, 216, 175));
+  border-radius: 40% 40% 40% 40% / 30% 30% 30% 30%;
+  transform: rotate(-10deg);
+}
+
+
+.drop-1 { top: 0px;    right: 40px; }
+.drop-2 { top: 90px;   right: 90px; }
+.drop-3 { top: 180px;  right: 140px; }
+.drop-4 { top: 270px;  right: 190px; }
+.drop-5 { top: 360px;  right: 240px; }
+.drop-6 { top: 450px;  right: 290px; }
+.drop-7 { top: 540px;  right: 340px; }

@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Trocchi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Radona&display=swap');
+
+/* WRAPPER */
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #8DB596;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+/* BOX */
+.left-box {
+  width: 85%;
+  max-width: 780px;    /* أصغر */
+  min-height: 60vh;     /* أصغر */
+  background: white;
+  border-radius: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+/* LEFT IMAGE */
+.box-left-image {
+  flex: 1 1 50%;
+  min-height: 270px; /* أصغر */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(157, 231, 187, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* TEXT */
+.welcome-title {
+  font-size: 1.6rem; /* أصغر */
+}
+
+.word {
+  font-size: 0.85rem;
+}
+
+/* RIGHT FORM */
+.right {
+  flex: 1 1 50%;
+  min-height: 250px;
+  padding: 15px; /* أصغر */
+}
+
+.custom-input {
+  padding: 6px;
+  border-radius: 45px;
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+}
+
+.btn-login {
+  padding: 6px 22px;
+  font-size: 0.9rem;
+  border-radius: 45px;
+}
+
+/* SOCIAL ICONS */
+.socialMedia {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  margin-top: 25px;
+}
+
+.socialMedia svg {
+  font-size: 1.6rem;
+  color: #0a5326ff;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.socialMedia svg:hover {
+  color: #4f9c6eff;
+  transform: scale(1.2);
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .left-box {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .box-left-image,
+  .right {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .custom-input {
+    font-size: 0.8rem;
+    padding: 5px;
+  }
+
+  .btn-login {
+    padding: 6px 18px;
+    font-size: 0.85rem;
+  }
+
+  .socialMedia svg {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-title {
+    font-size: 1.3rem;
+  }
+
+  .custom-input {
+    font-size: 0.8rem;
+    padding: 5px;
+  }
+
+  .btn-login {
+    font-size: 0.85rem;
+  }
+}

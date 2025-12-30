@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Trocchi:wght@300;400;700&display=swap');
+.admin-header {
+  width: 100%;
+  height: 70px;
+  background: #a3e4bdff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 35px;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 0 0 18px 18px;
+}
+
+.admin-actions {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.admin-actions button {
+  background: white;
+  color: #16a085;
+  border: none;
+  padding: 6px 6px;
+  border-radius: 40px;
+  font-weight: 100;
+  cursor: pointer;
+}

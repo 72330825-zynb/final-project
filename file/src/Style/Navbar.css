@@ -1,0 +1,238 @@
+/* ====== Container ====== */
+.navbar {
+  width: 100%;
+  background-color:#a3e4bdff;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  min-height: 64px;
+  padding: 0 16px;
+  box-sizing: border-box;
+
+  display: flex; 
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Left side */
+.navbar .leftSide {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .leftSide img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  margin-left: 10px;
+}
+
+/* Right side */
+.navbar .rightSide {
+  display: flex;
+  align-items: center;
+
+  flex: 1;
+  justify-content: center;
+
+  position: relative;
+  gap: 20px;
+}
+
+.navbar .rightSide a,
+.navbar .hiddenLinks a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 6px;
+  display: flex;
+}
+
+.navbar .rightSide a:hover,
+.navbar .hiddenLinks a:hover {
+  color: #035226;
+}
+
+/* Hamburger */
+.navbar .rightSide button {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  display: none;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  color: #fff;
+}
+
+/* Hidden mobile menu */
+.navbar .hiddenLinks {
+  display: none;
+}
+
+/* Mobile dropdown open */
+#open .hiddenLinks {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 64px;
+  background:#a3e4bdff;
+  display: grid;
+  gap: 10px;
+  padding: 12px 16px 16px;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+  animation: menuDrop .18s ease-out;
+}
+
+@keyframes menuDrop {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Right icon */
+.iconn {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+}
+
+.iconn a {
+  color: black;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.centerd {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 15px;
+}
+
+
+#open .hiddenLinks a {
+  color: white !important;   /* يخلي النص واضح فوق الأخضر */
+}
+
+
+
+
+
+
+/* ===== Desktop ===== */
+@media (min-width: 769px) {
+  .navbar .rightSide a { display: inline-block; }
+  .navbar .rightSide button { display: none; }
+  .navbar .hiddenLinks { display: none !important; }
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 12px;
+    min-height: 60px;
+  }
+
+  #open .hiddenLinks {
+    top: 60px;
+  }
+
+  .navbar .rightSide a {
+    display: none;
+  }
+
+  .navbar .rightSide button {
+    display: inline-flex;
+  }
+
+  /* 🔥 أهم شي — ترتيب وظهور اللينكات */
+  #open .hiddenLinks {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;  
+    text-align: center;
+    gap: 18px;
+  }
+
+  /* 🔥 خلي login ينزل بالنص */
+  #open .hiddenLinks > a {
+    display: block !important;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+  }
+
+  /* 🔥 profile icon ينزل تحت */
+  #open .iconn {
+    position: static !important;
+    transform: none !important;
+    margin-top: 5px;
+  }
+
+  .iconn a {
+    color: white !important;
+  }
+}
+
+/* Small phones */
+@media (max-width: 380px) {
+  .navbar .leftSide img {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+/* ====== Categories dropdown ====== */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  color: white;
+  padding: 8px 10px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  background: white;
+  min-width: 200px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+
+  display: none;
+  z-index: 9999;
+
+  white-space: normal !important;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  display: block !important;
+  width: 100%;
+  padding: 12px 18px;
+  text-decoration: none;
+  color: #2ecc71;
+  font-weight: 500;
+}
+
+.dropdown-content a:hover {
+  background-color: #eeeeee;
+  color: #145a32;
+}
+

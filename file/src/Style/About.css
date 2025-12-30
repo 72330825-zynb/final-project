@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Trocchi:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+.about-page {
+  min-height: 90vh;
+  padding: 50px 40px;
+  font-family: "Roboto", sans-serif;
+  color: #023800;
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 35px;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.about-left img {
+  width: 100%;
+  max-width: 700px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.about-right {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-title {
+  color: #1B5E20;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.about-text {
+  font-size: 17px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+/* ----------- RESPONSIVE ----------- */
+@media (max-width: 768px) {
+  .about-page {
+    padding: 30px 20px;
+  }
+
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-left img {
+    max-width: 100%;
+  }
+
+  .about-title {
+    font-size: 26px;
+  }
+
+  .about-text {
+    font-size: 15px;
+  }
+}

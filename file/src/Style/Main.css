@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend Giga:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Trocchi:wght@300;400;700&display=swap');
+html, body {
+  overflow-x: hidden !important;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* HERO SECTION */
+.hero-container {
+  position: relative;
+  width: 100%;
+  height: 85vh;
+  overflow: hidden;
+  background: #DCDBD8;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Title */
+.overlay h1 {
+  margin-bottom: 25px;
+  font-family: "Lexend";
+  font-weight: bold;
+  font-size: 28px;
+  color: white;
+}
+
+/* SMALLER SEARCH BAR */
+.search-bar {
+  background: white;
+  padding: 6px 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  width: 70%;
+  max-width: 650px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.search-bar select,
+.search-bar input {
+  flex: 1;
+  padding: 6px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.v-line {
+  width: 2px;
+  height: 22px;
+  background: #ccc;
+}
+
+/* Search Button Area */
+.search-button-area {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.icon-circle {
+  width: 40px;
+  height: 40px;
+  background: #94d4a8;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(219,210,210,0.3);
+  transition: 0.2s ease;
+}
+
+.search-btn {
+  background: #94d4a8;
+  border: none;
+  padding: 7px 14px;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* FILTER ICONS */
+.filter-icons {
+  margin-top: 40px;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.icon-wrapper {
+  text-align: center;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.icon-wrapper p {
+  margin-top: 6px;
+  color: white;
+  font-size: 14px;
+}
+
+/* HOVER — أخضر فاتح */
+.icon-wrapper:hover .icon-circle {
+  background: #02250d;
+  transform: scale(1.07);
+}
+
+/* ACTIVE — أخضر غامق */
+.icon-wrapper:active .icon-circle {
+  background: #66b982;
+  transform: scale(0.95);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+  .search-bar {
+    flex-direction: column;
+    width: 90%;
+    max-width: 350px;
+    gap: 6px;
+  }
+
+  .v-line {
+    display: none;
+  }
+
+  .search-bar select,
+  .search-bar input {
+    width: 100%;
+    font-size: 12px;
+  }
+
+  .filter-icons {
+    gap: 25px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* الخلفية الخضراء Full Width بدون أي فراغ */
+.full-width-section {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  background-color: #8DB596;
+  padding: 70px 0;
+}
+
+/* Container بالنص */
+.carousel-container {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+  padding: 0 15px;
+}
+
+/* الجملة تصير بسطر واحد */
+.carousel-title {
+  font-family: "Lexend Giga";
+  font-size: 18px;
+  white-space: nowrap;      /* هيدي اللي بتخليها ONE LINE */
+  overflow: hidden;
+  text-overflow: ellipsis;  /* بس يصغر التليفون بتحافظ عالشكل */
+  margin-bottom: 30px;
+}
+
+/* صور الكاروسيل */
+.custom-carousel img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+/* Responsive على الشاشات الصغيرة */
+@media (max-width: 576px) {
+  .carousel-title {
+    font-size: 14px;
+    white-space: normal;   /* بتسمح تتكسر بس على الموبايل */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

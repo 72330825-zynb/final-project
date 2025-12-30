@@ -1,0 +1,10 @@
+.custom-btn{
+    transition: all 0.3s ease;
+}
+.custom-btn:hover{
+    background-color: #bedfccff;
+    transform: scale(1.07);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 2);
+    color: rgb(1, 20, 9);
+
+}

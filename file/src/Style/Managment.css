@@ -1,0 +1,171 @@
+.management-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* ===== EDIT FORM ===== */
+.edit-form {
+  background: #f9f9f9;
+  padding: 25px 30px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* أعرض العمود بما يناسب */
+  gap: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.edit-form .form-group {
+  display: flex;
+  flex-direction: column; /* label فوق input */
+}
+
+.edit-form label {
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.edit-form input,
+.edit-form select {
+  padding: 7px 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  transition: 0.2s;
+}
+
+.edit-form input:focus,
+.edit-form select:focus {
+  border-color: #4CAF50;
+  outline: none;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+.form-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.form-actions button {
+  padding: 7px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.form-actions button:first-child {
+  background-color: #4CAF50;
+  color: #fff;
+}
+
+.form-actions button:first-child:hover {
+  background-color: #45a049;
+}
+
+.form-actions button:last-child {
+  background-color: #ccc;
+  color: #333;
+}
+
+.form-actions button:last-child:hover {
+  background-color: #bbb;
+}
+
+/* ===== TABLE ===== */
+.custom-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 12px;
+}
+
+.custom-table thead th {
+  text-align: left;
+  padding: 12px;
+  font-weight: 600;
+  color: #555;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.custom-table tbody tr {
+  background-color: #fff;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08);
+}
+
+.custom-table tbody td {
+  padding: 14px 12px;
+  color: #333;
+  vertical-align: middle;
+  height: 70px;
+}
+
+.custom-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.custom-table img {
+  width: 60px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px;
+  display: block;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.actions svg {
+  cursor: pointer;
+  font-size: 20px;
+  color: #000;
+  transition: 0.2s;
+}
+
+.actions svg:hover {
+  color: #0a5326;
+  transform: scale(1.1);
+}
+
+/* ===== responsive ===== */
+@media (max-width: 768px) {
+  .custom-table thead {
+    display: none;
+  }
+
+  .custom-table tbody tr {
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  .custom-table tbody td {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+  }
+
+  .custom-table tbody td::before {
+    content: attr(data-label);
+    font-weight: 600;
+  }
+
+  .edit-form {
+    grid-template-columns: 1fr; /* عمود واحد للشاشات الصغيرة */
+  }
+
+  .edit-form .form-group {
+    flex-direction: column; /* label فوق input */
+  }
+}
+
+
+
+

@@ -1,0 +1,150 @@
+/* المنطقة الحمراء */
+.red-section {
+  background-color: #BEDBBB;
+  width: 100%;
+  height: 150px;
+}
+
+/* عنوان القسم */
+h2 {
+  font-weight: bold;
+  font-family: "Trocchi", serif;
+  margin-top: 50px;
+  margin-left: 30px;
+  font-size: 28px;
+}
+
+/* السلايدر */
+.destination-list {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding: 20px 15px;
+  flex-wrap: nowrap; /* تمنع الكروت من النزول تحت بعض */
+}
+
+.destination-list > div {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+}
+
+/* الكارت */
+.menuItem {
+  width: 250px;
+  height: 428px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  padding: 12px;
+  background-color: white;
+  margin-top: 1px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* hover effect الأصلي */
+.menuItem:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+/* الطبقة الخضراء */
+.menuItem::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #a3e4bd;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.35s ease;
+  z-index: 0;
+}
+
+.menuItem:hover::before {
+  transform: scaleX(1);
+}
+
+/* الصورة */
+.menuItem-image {
+  width: 100%;
+  height: 240px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* النصوص */
+.menuItem h1,
+.menuItem p {
+  position: relative;
+  z-index: 2;
+  transition: color 0.3s ease;
+}
+
+/* زر Discover */
+.discoverrr {
+  opacity: 0;
+  position: relative;
+  z-index: 2;
+  transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.menuItem:hover h1,
+.menuItem:hover p,
+.menuItem:hover .discoverrr {
+  color: white !important;
+}
+
+.menuItem:hover .discoverrr {
+  opacity: 1;
+}
+
+/* زر بدون خلفية */
+.text-as-paragraph {
+  background: none !important;
+  border: none !important;
+  color: #000 !important;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.text-as-paragraph:hover {
+  color: #ffcc00 !important;
+  cursor: pointer;
+}
+
+/* responsive للموبايل */
+@media (max-width: 576px) {
+  h2 {
+    font-size: 20px;
+    margin-left: 15px;
+  }
+
+  .destination-list > div {
+    width: 180px; /* أصغر الكروت */
+  }
+
+  .destination-list {
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .menuItem {
+    height: 380px;
+    padding: 8px;
+  }
+
+  .menuItem-image {
+    height: 200px;
+  }
+}
+
+
+
+

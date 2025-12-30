@@ -1,0 +1,153 @@
+/* الكارد */
+.resturant-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: 0.3s ease;
+  overflow: hidden;   /* مهم */
+}
+
+/* الصورة */
+.resturant-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* النصوص */
+.resturant-info {
+  margin-top: 10px;
+}
+
+.resturant-info h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* النجوم + القلب */
+.resturant-rating-fav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* الأزرار */
+.resturant-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.comment-btn,
+.menu-btn {
+  flex: 1;
+  background: #f5f5f5;
+  border: none;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Hover */
+.resturant-card:hover {
+  background-color: #a3e4bd;
+  transform: translateY(-5px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .resturant-card {
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+  }
+
+  .resturant-image {
+    height: 150px; /* أصغر للموبايل */
+  }
+
+  .resturant-info h3 {
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
+
+  .resturant-info p {
+    font-size: 14px;
+  }
+
+  .resturant-actions {
+    gap: 8px;
+    margin-top: 10px;
+  }
+
+  .comment-btn,
+  .menu-btn {
+    padding: 6px;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,68 @@
+/* src/pages/Dashboard.css */
+
+.dashboard {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* الصف الأعلى: 3 بطاقات */
+.dashboard-top {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap; /* احتياط لو صغر العرض */
+}
+
+.card {
+  flex: 1;
+  min-width: 220px;
+  background: #ffffff;
+  padding: 25px 20px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  text-align: center;
+  border: 2px solid #16a085;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #16a085;
+}
+
+.card p {
+  font-size: 28px;
+  font-weight: 700;
+  color: #16a085;
+  margin-top: 10px;
+}
+
+/* الصف الثاني: مربعات Charts */
+.dashboard-charts {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;      /* ⭐ الحل الأساسي */
+}
+
+/* كل chart */
+.chart-box {
+  flex: 1;
+  min-width: 300px;     /* ⭐ يمنع الاختفاء */
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  border: 2px solid #16a085;
+  text-align: center;
+}
+
+.chart-box h4 {
+  color: #16a085;
+  margin-bottom: 15px;
+}
